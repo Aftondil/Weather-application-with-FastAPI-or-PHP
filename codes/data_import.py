@@ -28,7 +28,7 @@ def from_api_to_db(city: str, db: Session = Depends(get_db)):
 
 
 def from_api(city):
-    url = f"https://api.openweathermap.org/data/2.5/weather?units=metric&appid=a7d349368f7863ab020c768792f83bac&q={city}"
+    url = f"https://api.openweathermap.org/data/2.5/weather?units=metric&appid={api_code}&q={city}"
     # async with httpx.AsyncClient() as client:
     #     response = await client.get(url)
     response = requests.get(url)
