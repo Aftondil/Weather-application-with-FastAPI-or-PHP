@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Tashkent');
 
 //$url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $_GET['city'] . '&appid=xxx&units=metric';
-$url = 'https://api.openweathermap.org/data/2.5/weather?units=metric' . '&appid=a7d349368f7863ab020c768792f83bac' . '&q=' . $_GET['city'];
+$url = 'https://api.openweathermap.org/data/2.5/weather?units=metric' . '&appid={api code}' . '&q=' . $_GET['city'];
 // Get data from openweathermap and store in JSON object
 $data = file_get_contents($url);
 $json = json_decode($data, true);
